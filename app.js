@@ -8,10 +8,12 @@ const publicPath = path.resolve(__dirname , "./public");
 
 app.use (express.static (publicPath));
 
+const port = process.env.PORT || 3033;
+
 /*inicializo servidor 3033 
 ruta localhost:3033*/
-app.listen (3033, () => 
-    console.log("Servidor corriendo en Puerto 3033")
+app.listen (port, () => 
+    console.log(`Servidor corriendo en Puerto ${port}}`)
 );
 
 app.get("/", (req,res)=>
